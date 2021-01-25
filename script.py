@@ -10,8 +10,8 @@ def doDamageCalc(weapon, artiset):
     totalHPPercent = ArtifactStats.sandsHP + \
         ArtifactStats.cupHP + ArtifactStats.helmHP
 
-    if hasattr(weapon, hpPercent):
-        totalHPPercent += weapon.HPPercent
+    if hasattr(weapon, "hpPercent"):
+        totalHPPercent += weapon.hpPercent
 
     totalHP = (Zhongli.baseHP * (1 + totalHPPercent)) + ArtifactStats.flowerHP
 
@@ -19,8 +19,8 @@ def doDamageCalc(weapon, artiset):
     totalATKPercent = ArtifactStats.sandsATK + \
         ArtifactStats.cupATK + ArtifactStats.helmATK
 
-    if hasattr(weapon, atkPercent):
-        totalATKPercent += weapon.ATKPercent
+    if hasattr(weapon, "atkPercent"):
+        totalATKPercent += weapon.atkPercent
 
     totalATK = (Zhongli.baseATK + weapon.baseATK) * \
         (1+totalATKPercent) + ArtifactStats.featherATK
@@ -28,12 +28,12 @@ def doDamageCalc(weapon, artiset):
     # CRIT stat calculations ===================================================
     totalCritRATE = ArtifactStats.helmCritRATE
 
-    if hasattr(weapon, critRATE):
+    if hasattr(weapon, "critRATE"):
         totalCritRate += weapon.critRATE
 
     totalCritDMG = ArtifactStats.helmCritDMG
 
-    if hasattr(weapon, critDMG):
+    if hasattr(weapon, "critDMG"):
         totalCritDMG += weapon.critDMG
 
     critMulti = totalCritRATE * (1+totalCritDMG) + 1
@@ -41,7 +41,7 @@ def doDamageCalc(weapon, artiset):
     # PHYS stat calculations ===================================================
     totalPHYSDMG = ArtifactStats.cupPHYS
 
-    if hasattr(weapon, physDMG):
+    if hasattr(weapon, "physDMG"):
         totalPHYSDMG += weapon.physDMG
 
     physMulti = totalPHYSDMG + 1
@@ -55,7 +55,7 @@ def doDamageCalc(weapon, artiset):
     # Normal attack calculations ===============================================
     comboTotal = Zhongli.Normal.mv
 
-    if hasattr(weapon, mvAdditive):
+    if hasattr(weapon, "mvAdditive"):
         comboTotal += (weapon.mvAdditive * Zhongli.Normal.hits)
 
     # Buff additional damage
@@ -78,7 +78,7 @@ def doDamageCalc(weapon, artiset):
     # Planet Befall calculations ===============================================
     qConversionDMG = totalHP * Zhongli.Q.hpConv
 
-    qDamage = ((totalATK * Zhongli.q.mv) + qConversionDMG) * \
+    qDamage = ((totalATK * Zhongli.Q.mv) + qConversionDMG) * \
         critMulti * geoMulti
 
 # * Outputs ====================================================================
@@ -87,5 +87,11 @@ def doDamageCalc(weapon, artiset):
         "HP": totalHP,
         "normalDMG": normalAttackDamage,
         "eDMG": eDamage,
-        "qDMG": qDamage
+        "qDMG": qDamage,
+        "totalDMG": normalAttackDamage + eDamage + qDamage
     }
+
+
+# Calling code
+if __name__ == "__main__":
+    print(doDamageCalc(CrescentPike, 0))
