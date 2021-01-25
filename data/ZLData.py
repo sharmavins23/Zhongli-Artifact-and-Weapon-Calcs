@@ -7,6 +7,7 @@ class Zhongli:
     baseATK = 251
     baseCritRATE = 0.05
     baseCritDMG = 0.5
+
     # Ability MVs and frame counts
 
     class Normal:  # Normal attack spear kick hop combo

@@ -4,6 +4,14 @@ This project is a small artifact and weapon calculator, which calculates all of
 Zhongli's possible weapons and artifacts and saves their stats in a data-driven
 format.
 
+# To-Do List
+
+-   Re-do weapon classes with dynamic attack and stat calculations based on
+    level and refinement
+-   Re-do weapon classes with attributes to enable or disable stacking
+-   Re-do character data with dynamic stat calculations based on level, talent
+    level
+
 # License TL;DR
 
 This project is distributed under the MIT license. This is a paraphrasing of a
