@@ -1,7 +1,16 @@
 # Data imports
 from data.ZLData import Zhongli
 from data.ArtiStats import ArtifactStats
+# Weapon imports
 from data.weapons.CPikeData import CrescentPike
+# Artifact set imports
+from data.artisets.BloodstainedGlad import BloodstainedGlad
+from data.artisets.BloodstainedNoblesse import BloodstainedNoblesse
+from data.artisets.Bolide import Bolide
+from data.artisets.Glad import Glad
+from data.artisets.GladNoblesse import GladNoblesse
+from data.artisets.PetraGlad import PetraGlad
+from data.artisets.PetraNoblesse import PetraNoblesse
 
 
 # Functional damage calculation
@@ -52,7 +61,7 @@ def doDamageCalc(weapon, artiset):
     # GEO stat calculations ====================================================
     totalGEODMG = ArtifactStats.cupGEO
 
-    if hasattr(artiset, geoDMG):
+    if hasattr(artiset, "geoDMG"):
         totalGEODMG += artiset.geoDMG
 
     geoMulti = totalGEODMG + 1
@@ -91,7 +100,7 @@ def doDamageCalc(weapon, artiset):
     burstDMG = 0
     if hasattr(artiset, "burstDMG"):
         burstDMG += artiset.burstDMG
-    burstDMGMulti += 1
+    burstDMGMulti = burstDMG + 1
 
     qDamage = ((totalATK * Zhongli.Q.mv) + qConversionDMG) * \
         critMulti * geoMulti * burstDMGMulti
@@ -109,4 +118,37 @@ def doDamageCalc(weapon, artiset):
 
 # Calling code
 if __name__ == "__main__":
-    print(doDamageCalc(CrescentPike, 0))
+    artisets = [BloodstainedGlad, BloodstainedNoblesse,
+                Bolide, Glad, GladNoblesse, PetraGlad, PetraNoblesse]
+
+    weapons = [CrescentPike]
+
+    artistats = {
+        "sands": ["hp", "atk"],
+        "cup": ["hp", "atk", "phys", "geo"],
+        "helm": ["hp", "atk", "critRATE", "critDMG"]
+    }
+
+    for weapon in weapons:
+        for artiset in artisets:
+            for sandsIndex, sands in enumerate(artistats["sands"]):
+                ArtifactStats.setSands(sandsIndex)
+                for cupIndex, cup in enumerate(artistats["cup"]):
+                    ArtifactStats.setCup(cupIndex)
+                    for helmIndex, helm in enumerate(artistats["helm"]):
+                        ArtifactStats.setHelm(helmIndex)
+
+                        # Run calculations
+                        damageData = doDamageCalc(weapon, artiset)
+                        damageData["meta"] = {
+                            "weapon": type(weapon).__name__,
+                            "artifact set": type(artiset).__name__,
+                            "sands": sands,
+                            "cup": cup,
+                            "helm": helm
+                        }
+
+                    print(damageData)
+
+# ! Artifacts are never changed
+# ! Need to add dunder methods for name or str

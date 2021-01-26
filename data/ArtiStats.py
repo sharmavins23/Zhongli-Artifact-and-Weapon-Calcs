@@ -5,6 +5,19 @@ class ArtifactStats:
     cupChoice = [1, 0, 0, 0]
     helmChoice = [1, 0, 0, 0]
 
+    # Setters for sands, cup, and helm choice
+    def setSands(choice):
+        sandsChoice = [0] * 2
+        sandsChoice[choice] = 1
+
+    def setCup(choice):
+        cupChoice = [0] * 4
+        cupChoice[choice] = 1
+
+    def setHelm(choice):
+        helmChoice = [0] * 4
+        helmChoice[choice] = 1
+
     # Stat configurations
     flowerHP = 4780
     featherATK = 311
