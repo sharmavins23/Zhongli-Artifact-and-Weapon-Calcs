@@ -39,8 +39,12 @@ def doDamageCalc(weapon, artiset):
     if hasattr(artiset, "atkPercent"):
         totalATKPercent += artiset.atkPercent
 
+    atkConv = 0
+    if hasattr(weapon, "atkConv"):
+        atkConv = totalHP * weapon.atkConv
+
     totalATK = (Zhongli.baseATK + weapon.baseATK) * \
-        (1+totalATKPercent) + artistats.featherATK
+        (1+totalATKPercent) + artistats.featherATK + atkConv
 
     # CRIT stat calculations ===================================================
     totalCritRATE = artistats.helmCritRATE
@@ -86,11 +90,23 @@ def doDamageCalc(weapon, artiset):
     if hasattr(artiset, "normalDMG"):
         normalDMG += artiset.normalDMG
 
+    # ! Normal attack speed calculations - This is all wrong, hitlag is a thing
+    normalATKSpeed = 1
+    if hasattr(weapon, "normalATKSpeed"):
+        normalATKSpeed += weapon.normalATKSpeed
+
     normalAttackDamage = ((totalATK * comboTotal) + normalBuffAddlDMG) * \
-        (physMulti + normalDMG) * critMulti * Zhongli.Normal.rotations
-    # Calculating normal attacks as a separate tick
+        (physMulti + normalDMG) * critMulti * \
+        (Zhongli.Normal.rotations*normalATKSpeed)
+
+    # Extra weapon hit calculation
+    # MV additive
     normalAttackExtraDamage = (totalATK * mvAdditive) * \
-        physMulti * critMulti * Zhongli.Normal.rotations
+        physMulti * critMulti * (Zhongli.Normal.rotations * normalATKSpeed)
+
+    if hasattr(weapon, "cooldown"):
+        normalAttackExtraDamage /= ((Zhongli.Normal.rotations*normalATKSpeed) *
+                                    140 / weapon.cooldown)
 
     normalAttackDamage += normalAttackExtraDamage
 
