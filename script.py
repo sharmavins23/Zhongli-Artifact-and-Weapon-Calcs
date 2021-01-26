@@ -137,7 +137,9 @@ if __name__ == "__main__":
     totalDataJSON = {}
 
     for weapon in weapons:
+        totalDataJSON[weapon.name] = {}
         for artiset in artisets:
+            totalDataJSON[artiset.name] = {}
             for sandsIndex, sands in enumerate(artistatsList["sands"]):
                 artistats.setSands(sandsIndex)
                 for cupIndex, cup in enumerate(artistatsList["cup"]):
