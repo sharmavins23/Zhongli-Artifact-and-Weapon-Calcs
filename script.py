@@ -105,7 +105,7 @@ def doDamageCalc(weapon, artiset):
     if hasattr(artiset, "normalDMG"):
         normalDMG += artiset.normalDMG
 
-    # ! Normal attack speed calculations - This is all wrong, hitlag is a thing
+    # TODO: improve atk speed with tested hitlag values
     normalATKSpeed = 1
     if hasattr(weapon, "normalATKSpeed"):
         normalATKSpeed += weapon.normalATKSpeed

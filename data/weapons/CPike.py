@@ -1,7 +1,7 @@
 # Static data class for crescent pike
 class CrescentPike:
     level = 90
-    refinementLevel = 1
+    refinementLevel = 5
 
     name = "Crescent Pike"
 
@@ -10,4 +10,4 @@ class CrescentPike:
     physDMG = 0.345
 
     # Passive values
-    mvAdditive = 0.2
+    mvAdditive = 0.4

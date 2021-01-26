@@ -118,10 +118,10 @@
             "Glad": {
                 "ATK": 1654.136,
                 "HP": 19475.0,
-                "normalDMG": 90993.0028308034,
+                "normalDMG": 113928.81478063471,
                 "eDMG": 12624.505697472,
                 "qDMG": 22294.7902262976,
-                "totalDMG": 125912.29875457298,
+                "totalDMG": 148848.1107044043,
                 "totalSuppDMG": 34919.2959237696,
                 "identifier": "atk sands, phys cup, critRATE helm"
             }
@@ -130,10 +130,10 @@
             "Petra/Noblesse": {
                 "ATK": 1507.256,
                 "HP": 19475.0,
-                "normalDMG": 52357.08176658062,
+                "normalDMG": 66936.66742246176,
                 "eDMG": 19146.537789422597,
                 "qDMG": 40845.865137136316,
-                "totalDMG": 112349.48469313953,
+                "totalDMG": 126929.07034902068,
                 "totalSuppDMG": 59992.40292655891,
                 "identifier": "atk sands, geo cup, critRATE helm"
             }
@@ -142,10 +142,10 @@
             "Petra/Glad": {
                 "ATK": 1654.136,
                 "HP": 19475.0,
-                "normalDMG": 56183.366946716844,
+                "normalDMG": 72183.71293868942,
                 "eDMG": 20401.201207114755,
                 "qDMG": 36028.38100569692,
-                "totalDMG": 112612.94915952852,
+                "totalDMG": 128613.29515150111,
                 "totalSuppDMG": 56429.58221281168,
                 "identifier": "atk sands, geo cup, critRATE helm"
             }
