@@ -20,14 +20,14 @@ class ArtifactStats:
         self.helmCritDMG = 0
 
     # Setters for sands, cup, and helm choice
-    def setSands(choice):
+    def setSands(self, choice):
         self.sandsChoice = [0] * 2
         self.sandsChoice[choice] = 1
 
         self.sandsHP = 0.4660 * self.sandsChoice[0]
         self.sandsATK = 0.4660 * self.sandsChoice[1]
 
-    def setCup(choice):
+    def setCup(self, choice):
         self.cupChoice = [0] * 4
         self.cupChoice[choice] = 1
 
@@ -36,7 +36,7 @@ class ArtifactStats:
         self.cupPHYS = 0.5830 * self.cupChoice[2]
         self.cupGEO = 0.4660 * self.cupChoice[3]
 
-    def setHelm(choice):
+    def setHelm(self, choice):
         self.helmChoice = [0] * 4
         self.helmChoice[choice] = 1
 
