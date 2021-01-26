@@ -3,7 +3,22 @@ import json
 from data.ZLData import Zhongli
 from data.ArtiStats import ArtifactStats
 # Weapon imports
+from data.weapons.BlackcliffBase import BlackcliffPole_Base
+from data.weapons.BlackcliffStacked import BlackcliffPole_Stacked
+from data.weapons.BTassel import BlackTassel
 from data.weapons.CPike import CrescentPike
+from data.weapons.DeathmatchMultiple import Deathmatch_Multi
+from data.weapons.DeathmatchSingle import Deathmatch_Single
+from data.weapons.Dragonspine import DragonspineSpear
+from data.weapons.HomaAbove import StaffofHoma_Above
+from data.weapons.HomaBelow import StaffofHoma_Below
+from data.weapons.LithicBase import LithicSpear_Base
+from data.weapons.LithicStacked import LithicSpear_Stacked
+from data.weapons.PrimordialJade import PrimordialJadeWingedSpear
+from data.weapons.Skyward import SkywardSpine
+from data.weapons.Starglitter import Starglitter
+from data.weapons.Vortex import VortexVanquisher
+from data.weapons.WTassel import WhiteTassel
 # Artifact set imports
 from data.artisets.BloodstainedGlad import BloodstainedGlad
 from data.artisets.BloodstainedNoblesse import BloodstainedNoblesse
@@ -149,7 +164,8 @@ if __name__ == "__main__":
     artisets = [BloodstainedGlad, BloodstainedNoblesse,
                 Bolide, Glad, GladNoblesse, PetraGlad, PetraNoblesse]
 
-    weapons = [CrescentPike]
+    weapons = [BlackcliffPole_Base, BlackcliffPole_Stacked, BlackTassel, CrescentPike, Deathmatch_Multi, Deathmatch_Single, DragonspineSpear, StaffofHoma_Above,
+               StaffofHoma_Below, LithicSpear_Base, LithicSpear_Stacked, PrimordialJadeWingedSpear, SkywardSpine, Starglitter, VortexVanquisher, WhiteTassel]
 
     artistatsList = {
         "sands": ["hp", "atk"],
