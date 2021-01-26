@@ -75,8 +75,9 @@ def doDamageCalc(weapon, artiset):
     # Normal attack calculations ===============================================
     comboTotal = Zhongli.Normal.mv
 
+    mvAdditive = 0
     if hasattr(weapon, "mvAdditive"):
-        comboTotal += (weapon.mvAdditive * Zhongli.Normal.hits)
+        mvAdditive += (weapon.mvAdditive * Zhongli.Normal.hits)
 
     # Buff additional damage
     normalBuffAddlDMG = Zhongli.Normal.hpConv * totalHP * Zhongli.Normal.hits
@@ -87,6 +88,11 @@ def doDamageCalc(weapon, artiset):
 
     normalAttackDamage = ((totalATK * comboTotal) + normalBuffAddlDMG) * \
         (physMulti + normalDMG) * critMulti * Zhongli.Normal.rotations
+    # Calculating normal attacks as a separate tick
+    normalAttackExtraDamage = (totalATK * mvAdditive) * \
+        physMulti * critMulti * Zhongli.Normal.rotations
+
+    normalAttackDamage += normalAttackExtraDamage
 
     # Dominus Lapidis calculations =============================================
     eBuffAddlDMG = Zhongli.HoldE.hpConv * totalHP
@@ -117,7 +123,8 @@ def doDamageCalc(weapon, artiset):
         "normalDMG": normalAttackDamage,
         "eDMG": eDamage,
         "qDMG": qDamage,
-        "totalDMG": normalAttackDamage + eDamage + qDamage
+        "totalDMG": normalAttackDamage + eDamage + qDamage,
+        "totalSuppDMG": eDamage + qDamage
     }
 
 
@@ -139,7 +146,7 @@ if __name__ == "__main__":
     for weapon in weapons:
         totalDataJSON[weapon.name] = {}
         for artiset in artisets:
-            totalDataJSON[artiset.name] = {}
+            totalDataJSON[weapon.name][artiset.name] = []
             for sandsIndex, sands in enumerate(artistatsList["sands"]):
                 artistats.setSands(sandsIndex)
                 for cupIndex, cup in enumerate(artistatsList["cup"]):
@@ -150,12 +157,78 @@ if __name__ == "__main__":
                         # Run calculations
                         damageData = doDamageCalc(weapon, artiset)
 
+                        # Add identifier value
                         identifier = f"{sands} sands, {cup} cup, {helm} helm"
+                        damageData["identifier"] = identifier
 
-                        totalDataJSON[weapon.name][artiset.name][identifier] = damageData
+                        totalDataJSON[weapon.name][artiset.name].append(
+                            damageData)
+
+    maximalData = {}
+    # Initialize parse parameters
+    eMax = {
+        "name": "",
+        "value": 0,
+        "idx": 0
+    }
+    totalMax = {
+        "name": "",
+        "value": 0,
+        "idx": 0
+    }
+    totalSuppMax = {
+        "name": "",
+        "value": 0,
+        "idx": 0
+    }
+
+    # Parse through data for maximal values
+    for weapon, weaponData in totalDataJSON.items():
+        maximalData[weapon] = {}
+        for artifactSet, artifactSetData in weaponData.items():
+            for idx, data in enumerate(artifactSetData):
+                if data["eDMG"] > eMax["value"]:
+                    eMax["name"] = artifactSet
+                    eMax["value"] = data["eDMG"]
+                    eMax["idx"] = idx
+
+                if data["totalDMG"] > totalMax["value"]:
+                    totalMax["name"] = artifactSet
+                    totalMax["value"] = data["totalDMG"]
+                    totalMax["idx"] = idx
+
+                if data["totalSuppDMG"] > totalSuppMax["value"]:
+                    totalSuppMax["name"] = artifactSet
+                    totalSuppMax["value"] = data["totalSuppDMG"]
+                    totalSuppMax["idx"] = idx
+
+        maximalData[weapon]["eMax"] = {
+            eMax["name"]: weaponData[eMax["name"]][eMax["idx"]]
+        }
+        maximalData[weapon]["totalMax"] = {
+            totalMax["name"]: weaponData[totalMax["name"]][totalMax["idx"]]
+        }
+        maximalData[weapon]["totalSuppMax"] = {
+            totalSuppMax["name"]: weaponData[totalSuppMax["name"]
+                                             ][totalSuppMax["idx"]]
+        }
+
+        # Reset parse parameters for next weapon
+        eMax = {
+            "name": "",
+            "value": 0,
+            "idx": 0
+        }
+        totalMax = {
+            "name": "",
+            "value": 0,
+            "idx": 0
+        }
+        totalSuppMax = {
+            "name": "",
+            "value": 0,
+            "idx": 0
+        }
 
     with open("dataOut.json", "w") as outfile:
-        json.dump(totalDataJSON, outfile)
-
-
-# ! Need to add dunder methods for name or str
+        json.dump(maximalData, outfile)
