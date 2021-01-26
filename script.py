@@ -1,3 +1,4 @@
+import json
 # Data imports
 from data.ZLData import Zhongli
 from data.ArtiStats import ArtifactStats
@@ -13,7 +14,9 @@ from data.artisets.PetraGlad import PetraGlad
 from data.artisets.PetraNoblesse import PetraNoblesse
 
 
-# Creating instance of artistats
+# Creating instances of weapons
+crescentPike = CrescentPike()
+# Creating instances of artistats
 artistats = ArtifactStats()
 
 
@@ -125,13 +128,15 @@ if __name__ == "__main__":
     artisets = [BloodstainedGlad, BloodstainedNoblesse,
                 Bolide, Glad, GladNoblesse, PetraGlad, PetraNoblesse]
 
-    weapons = [CrescentPike]
+    weapons = [crescentPike]
 
     artistatsList = {
         "sands": ["hp", "atk"],
         "cup": ["hp", "atk", "phys", "geo"],
         "helm": ["hp", "atk", "critRATE", "critDMG"]
     }
+
+    totalDataJSON = {}
 
     for weapon in weapons:
         for artiset in artisets:
@@ -144,14 +149,13 @@ if __name__ == "__main__":
 
                         # Run calculations
                         damageData = doDamageCalc(weapon, artiset)
-                        damageData["meta"] = {
-                            "weapon": type(weapon).__name__,
-                            "artifact set": type(artiset).__name__,
-                            "sands": sands,
-                            "cup": cup,
-                            "helm": helm
-                        }
 
-                    print(damageData)
+                        identifier = f"{sands} sands, {cup} cup, {helm} helm"
+
+                        totalDataJSON[weapon.__name__][artiset.__name__][identifier] = damageData
+
+    with open("dataOut.json", "w") as outfile:
+        json.dump(totalDataJSON, outfile)
+
 
 # ! Need to add dunder methods for name or str
