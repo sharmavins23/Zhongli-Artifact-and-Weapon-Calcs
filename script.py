@@ -3,7 +3,7 @@ import json
 from data.ZLData import Zhongli
 from data.ArtiStats import ArtifactStats
 # Weapon imports
-from data.weapons.CPikeData import CrescentPike
+from data.weapons.CPike import CrescentPike
 # Artifact set imports
 from data.artisets.BloodstainedGlad import BloodstainedGlad
 from data.artisets.BloodstainedNoblesse import BloodstainedNoblesse
