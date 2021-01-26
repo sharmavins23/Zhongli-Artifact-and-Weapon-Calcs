@@ -1,17 +1,119 @@
 {
-    "Crescent Pike": {
-        "eMax": {
-            "Petra/Glad": {
-                "ATK": 1654.136,
+    "Blackcliff Pole (no stacks)": {
+        "totalMax": {
+            "Glad": {
+                "ATK": 1563.606,
                 "HP": 19475.0,
-                "normalDMG": 56183.366946716844,
-                "eDMG": 20401.201207114755,
-                "qDMG": 36028.38100569692,
-                "totalDMG": 112612.94915952852,
-                "totalSuppDMG": 56429.58221281168,
+                "normalDMG": 62889.18196737962,
+                "eDMG": 13733.569760984512,
+                "qDMG": 24350.66785521583,
+                "totalDMG": 100973.41958357996,
+                "totalSuppDMG": 38084.23761620034,
+                "identifier": "atk sands, phys cup, critRATE helm"
+            }
+        },
+        "totalSuppMax": {
+            "Petra/Noblesse": {
+                "ATK": 1426.626,
+                "HP": 19475.0,
+                "normalDMG": 30648.532835239115,
+                "eDMG": 20870.408588721708,
+                "qDMG": 44702.471190683005,
+                "totalDMG": 96221.41261464384,
+                "totalSuppDMG": 65572.87977940471,
                 "identifier": "atk sands, geo cup, critRATE helm"
             }
         },
+        "eMax": {
+            "Petra/Glad": {
+                "ATK": 1563.606,
+                "HP": 19475.0,
+                "normalDMG": 32534.496620475755,
+                "eDMG": 22193.448733750974,
+                "qDMG": 39350.679254028786,
+                "totalDMG": 94078.62460825552,
+                "totalSuppDMG": 61544.127987779764,
+                "identifier": "atk sands, geo cup, critRATE helm"
+            }
+        }
+    },
+    "Blackcliff Pole (3 stacks)": {
+        "totalMax": {
+            "Glad": {
+                "ATK": 1837.5660000000003,
+                "HP": 19475.0,
+                "normalDMG": 70180.31796110448,
+                "eDMG": 15370.995683050432,
+                "qDMG": 26947.96974687377,
+                "totalDMG": 112499.28339102869,
+                "totalSuppDMG": 42318.9654299242,
+                "identifier": "atk sands, phys cup, critRATE helm"
+            }
+        },
+        "totalSuppMax": {
+            "Petra/Noblesse": {
+                "ATK": 1700.586,
+                "HP": 19475.0,
+                "normalDMG": 34420.460405712394,
+                "eDMG": 23516.488878780237,
+                "qDMG": 49739.15901898607,
+                "totalDMG": 107676.1083034787,
+                "totalSuppDMG": 73255.6478977663,
+                "identifier": "atk sands, geo cup, critRATE helm"
+            }
+        },
+        "eMax": {
+            "Petra/Glad": {
+                "ATK": 1837.5660000000003,
+                "HP": 19475.0,
+                "normalDMG": 36306.42419094903,
+                "eDMG": 24839.5290238095,
+                "qDMG": 43547.919110948016,
+                "totalDMG": 104693.87232570654,
+                "totalSuppDMG": 68387.44813475752,
+                "identifier": "atk sands, geo cup, critRATE helm"
+            }
+        }
+    },
+    "Black Tassel": {
+        "totalMax": {
+            "Glad": {
+                "ATK": 1024.9,
+                "HP": 33214.825,
+                "normalDMG": 56214.47742997823,
+                "eDMG": 12036.3568122,
+                "qDMG": 22963.13866659,
+                "totalDMG": 91213.97290876822,
+                "totalSuppDMG": 34999.49547879,
+                "identifier": "hp sands, phys cup, critRATE helm"
+            }
+        },
+        "totalSuppMax": {
+            "Petra/Noblesse": {
+                "ATK": 916.0,
+                "HP": 33214.825,
+                "normalDMG": 27755.439634079998,
+                "eDMG": 18520.5180892704,
+                "qDMG": 42759.461391750716,
+                "totalDMG": 89035.4191151011,
+                "totalSuppDMG": 61279.97948102112,
+                "identifier": "hp sands, geo cup, critRATE helm"
+            }
+        },
+        "eMax": {
+            "Petra/Glad": {
+                "ATK": 1306.83,
+                "HP": 26366.954999999998,
+                "normalDMG": 29091.649756546278,
+                "eDMG": 19653.85099841472,
+                "qDMG": 36140.908950452445,
+                "totalDMG": 84886.40970541345,
+                "totalSuppDMG": 55794.75994886717,
+                "identifier": "atk sands, geo cup, critRATE helm"
+            }
+        }
+    },
+    "Crescent Pike": {
         "totalMax": {
             "Glad": {
                 "ATK": 1654.136,
@@ -33,6 +135,474 @@
                 "qDMG": 40845.865137136316,
                 "totalDMG": 112349.48469313953,
                 "totalSuppDMG": 59992.40292655891,
+                "identifier": "atk sands, geo cup, critRATE helm"
+            }
+        },
+        "eMax": {
+            "Petra/Glad": {
+                "ATK": 1654.136,
+                "HP": 19475.0,
+                "normalDMG": 56183.366946716844,
+                "eDMG": 20401.201207114755,
+                "qDMG": 36028.38100569692,
+                "totalDMG": 112612.94915952852,
+                "totalSuppDMG": 56429.58221281168,
+                "identifier": "atk sands, geo cup, critRATE helm"
+            }
+        }
+    },
+    "Deathmatch (Multiple Target)": {
+        "totalMax": {
+            "Glad": {
+                "ATK": 1584.23,
+                "HP": 19475.0,
+                "normalDMG": 71853.28914095482,
+                "eDMG": 15694.981989440003,
+                "qDMG": 27802.311480452,
+                "totalDMG": 115350.58261084682,
+                "totalSuppDMG": 43497.293469892,
+                "identifier": "atk sands, phys cup, critRATE helm"
+            }
+        },
+        "totalSuppMax": {
+            "Petra/Noblesse": {
+                "ATK": 1457.33,
+                "HP": 19475.0,
+                "normalDMG": 35192.95468330285,
+                "eDMG": 23974.82006608384,
+                "qDMG": 51271.73500830898,
+                "totalDMG": 110439.50975769566,
+                "totalSuppDMG": 75246.55507439282,
+                "identifier": "atk sands, geo cup, critRATE helm"
+            }
+        },
+        "eMax": {
+            "Petra/Glad": {
+                "ATK": 1584.23,
+                "HP": 19475.0,
+                "normalDMG": 37171.903332102855,
+                "eDMG": 25363.090894935045,
+                "qDMG": 44928.535352410436,
+                "totalDMG": 107463.52957944834,
+                "totalSuppDMG": 70291.62624734548,
+                "identifier": "atk sands, geo cup, critRATE helm"
+            }
+        }
+    },
+    "Deathmatch (Single Target)": {
+        "totalMax": {
+            "Glad": {
+                "ATK": 1640.6299999999999,
+                "HP": 19475.0,
+                "normalDMG": 73553.42591345722,
+                "eDMG": 16076.79464864,
+                "qDMG": 28407.946659811998,
+                "totalDMG": 118038.16722190921,
+                "totalSuppDMG": 44484.741308451994,
+                "identifier": "atk sands, phys cup, critRATE helm"
+            }
+        },
+        "totalSuppMax": {
+            "Petra/Noblesse": {
+                "ATK": 1513.73,
+                "HP": 19475.0,
+                "normalDMG": 36072.48741610286,
+                "eDMG": 24591.82932335104,
+                "qDMG": 52446.18274812388,
+                "totalDMG": 113110.49948757778,
+                "totalSuppDMG": 77038.01207147492,
+                "identifier": "atk sands, geo cup, critRATE helm"
+            }
+        },
+        "eMax": {
+            "Petra/Glad": {
+                "ATK": 1640.6299999999999,
+                "HP": 19475.0,
+                "normalDMG": 38051.43606490285,
+                "eDMG": 25980.100152202238,
+                "qDMG": 45907.24180225619,
+                "totalDMG": 109938.77801936129,
+                "totalSuppDMG": 71887.34195445843,
+                "identifier": "atk sands, geo cup, critRATE helm"
+            }
+        }
+    },
+    "Dragonspine Spear": {
+        "totalMax": {
+            "Glad": {
+                "ATK": 1471.4299999999998,
+                "HP": 19475.0,
+                "normalDMG": 75054.4856568371,
+                "eDMG": 11658.730551359999,
+                "qDMG": 20762.867725188,
+                "totalDMG": 107476.0839333851,
+                "totalSuppDMG": 32421.598276548,
+                "identifier": "atk sands, phys cup, critRATE helm"
+            }
+        },
+        "totalSuppMax": {
+            "Petra/Noblesse": {
+                "ATK": 1344.53,
+                "HP": 19475.0,
+                "normalDMG": 45834.85589316993,
+                "eDMG": 17756.51627997696,
+                "qDMG": 38200.025385407,
+                "totalDMG": 101791.3975585539,
+                "totalSuppDMG": 55956.541665383964,
+                "identifier": "atk sands, geo cup, critRATE helm"
+            }
+        },
+        "eMax": {
+            "Petra/Glad": {
+                "ATK": 1471.4299999999998,
+                "HP": 19475.0,
+                "normalDMG": 48608.20206471393,
+                "eDMG": 18840.508570997757,
+                "qDMG": 33552.79424390381,
+                "totalDMG": 101001.5048796155,
+                "totalSuppDMG": 52393.302814901566,
+                "identifier": "atk sands, geo cup, critRATE helm"
+            }
+        }
+    },
+    "Staff of Homa (>50% HP)": {
+        "totalMax": {
+            "Glad": {
+                "ATK": 1904.226,
+                "HP": 22414.0,
+                "normalDMG": 76915.55993658832,
+                "eDMG": 16814.283888410624,
+                "qDMG": 29693.401717134137,
+                "totalDMG": 123423.24554213308,
+                "totalSuppDMG": 46507.68560554476,
+                "identifier": "atk sands, phys cup, critRATE helm"
+            }
+        },
+        "totalSuppMax": {
+            "Petra/Noblesse": {
+                "ATK": 1749.6059999999998,
+                "HP": 22414.0,
+                "normalDMG": 37612.360531276885,
+                "eDMG": 25643.685750099037,
+                "qDMG": 54672.594365817575,
+                "totalDMG": 117928.6406471935,
+                "totalSuppDMG": 80316.28011591661,
+                "identifier": "atk sands, geo cup, critRATE helm"
+            }
+        },
+        "eMax": {
+            "Petra/Glad": {
+                "ATK": 1904.226,
+                "HP": 22414.0,
+                "normalDMG": 39790.770789750815,
+                "eDMG": 27171.88276367157,
+                "qDMG": 47984.53717488877,
+                "totalDMG": 114947.19072831115,
+                "totalSuppDMG": 75156.41993856034,
+                "identifier": "atk sands, geo cup, critRATE helm"
+            }
+        }
+    },
+    "Staff of Homa (<50% HP)": {
+        "totalMax": {
+            "Glad": {
+                "ATK": 1851.3336599999998,
+                "HP": 29261.87,
+                "normalDMG": 83130.31912616619,
+                "eDMG": 18069.6771611273,
+                "qDMG": 32608.11907380883,
+                "totalDMG": 133808.1153611023,
+                "totalSuppDMG": 50677.79623493613,
+                "identifier": "hp sands, phys cup, critRATE helm"
+            }
+        },
+        "totalSuppMax": {
+            "Petra/Noblesse": {
+                "ATK": 1696.71366,
+                "HP": 29261.87,
+                "normalDMG": 40827.4454715655,
+                "eDMG": 27672.401278809186,
+                "qDMG": 60324.814263881155,
+                "totalDMG": 128824.66101425583,
+                "totalSuppDMG": 87997.21554269033,
+                "identifier": "hp sands, geo cup, critRATE helm"
+            }
+        },
+        "eMax": {
+            "Petra/Glad": {
+                "ATK": 2128.366,
+                "HP": 22414.0,
+                "normalDMG": 42948.63442533705,
+                "eDMG": 29387.185302942977,
+                "qDMG": 51498.472918977124,
+                "totalDMG": 123834.29264725716,
+                "totalSuppDMG": 80885.65822192011,
+                "identifier": "atk sands, geo cup, critRATE helm"
+            }
+        }
+    },
+    "Lithic Spear (1 Liyue Comp)": {
+        "totalMax": {
+            "Glad": {
+                "ATK": 1936.472,
+                "HP": 19475.0,
+                "normalDMG": 65869.03085684963,
+                "eDMG": 14439.961894463999,
+                "qDMG": 25226.4230834112,
+                "totalDMG": 105535.41583472482,
+                "totalSuppDMG": 39666.3849778752,
+                "identifier": "atk sands, phys cup, critRATE helm"
+            }
+        },
+        "totalSuppMax": {
+            "Petra/Noblesse": {
+                "ATK": 1789.592,
+                "HP": 19475.0,
+                "normalDMG": 32246.642606564572,
+                "eDMG": 22051.60417040487,
+                "qDMG": 46476.23786953889,
+                "totalDMG": 100774.48464650832,
+                "totalSuppDMG": 68527.84203994376,
+                "identifier": "atk sands, geo cup, critRATE helm"
+            }
+        },
+        "eMax": {
+            "Petra/Glad": {
+                "ATK": 1936.472,
+                "HP": 19475.0,
+                "normalDMG": 34076.06355760457,
+                "eDMG": 23334.978421453823,
+                "qDMG": 40765.8997027925,
+                "totalDMG": 98176.94168185089,
+                "totalSuppDMG": 64100.87812424632,
+                "identifier": "atk sands, geo cup, critRATE helm"
+            }
+        }
+    },
+    "Lithic Spear (Full Liyue Comp)": {
+        "totalMax": {
+            "Glad": {
+                "ATK": 2107.832,
+                "HP": 19475.0,
+                "normalDMG": 74692.30953546932,
+                "eDMG": 16397.798410944,
+                "qDMG": 28487.7760853952,
+                "totalDMG": 119577.88403180853,
+                "totalSuppDMG": 44885.5744963392,
+                "identifier": "atk sands, phys cup, critRATE helm"
+            }
+        },
+        "totalSuppMax": {
+            "Petra/Noblesse": {
+                "ATK": 1960.9520000000002,
+                "HP": 19475.0,
+                "normalDMG": 36688.41450242743,
+                "eDMG": 25129.335480966147,
+                "qDMG": 52636.704498649866,
+                "totalDMG": 114454.45448204345,
+                "totalSuppDMG": 77766.039979616,
+                "identifier": "atk sands, geo cup, critRATE helm"
+            }
+        },
+        "eMax": {
+            "Petra/Glad": {
+                "ATK": 2107.832,
+                "HP": 19475.0,
+                "normalDMG": 38640.61538306743,
+                "eDMG": 26498.84223208551,
+                "qDMG": 46036.24615399865,
+                "totalDMG": 111175.70376915159,
+                "totalSuppDMG": 72535.08838608416,
+                "identifier": "atk sands, geo cup, critRATE helm"
+            }
+        }
+    },
+    "Primordial Jade Winged Spear": {
+        "totalMax": {
+            "Glad": {
+                "ATK": 2040.75,
+                "HP": 19475.0,
+                "normalDMG": 78118.99837691314,
+                "eDMG": 17140.788128,
+                "qDMG": 29841.1703124,
+                "totalDMG": 125100.95681731314,
+                "totalSuppDMG": 46981.958440400005,
+                "identifier": "atk sands, phys cup, critRATE helm"
+            }
+        },
+        "totalSuppMax": {
+            "Petra/Noblesse": {
+                "ATK": 1874.25,
+                "HP": 19475.0,
+                "normalDMG": 38044.181825142856,
+                "eDMG": 26037.498829312004,
+                "qDMG": 54704.43146909953,
+                "totalDMG": 118786.1121235544,
+                "totalSuppDMG": 80741.93029841153,
+                "identifier": "atk sands, geo cup, critRATE helm"
+            }
+        },
+        "eMax": {
+            "Petra/Glad": {
+                "ATK": 2040.75,
+                "HP": 19475.0,
+                "normalDMG": 40413.34628914285,
+                "eDMG": 27699.513614848,
+                "qDMG": 48223.3312248384,
+                "totalDMG": 116336.19112882925,
+                "totalSuppDMG": 75922.84483968641,
+                "identifier": "atk sands, geo cup, critRATE helm"
+            }
+        }
+    },
+    "Skyward Spine": {
+        "totalMax": {
+            "Glad": {
+                "ATK": 1833.55,
+                "HP": 19475.0,
+                "normalDMG": 78490.09347365847,
+                "eDMG": 14401.1253776,
+                "qDMG": 25251.38271058,
+                "totalDMG": 118142.60156183847,
+                "totalSuppDMG": 39652.50808818,
+                "identifier": "atk sands, phys cup, critRATE helm"
+            }
+        },
+        "totalSuppMax": {
+            "Petra/Noblesse": {
+                "ATK": 1667.05,
+                "HP": 19475.0,
+                "normalDMG": 38472.317571168,
+                "eDMG": 21763.169937433602,
+                "qDMG": 46095.07906320346,
+                "totalDMG": 106330.56657180507,
+                "totalSuppDMG": 67858.24900063706,
+                "identifier": "atk sands, geo cup, critRATE helm"
+            }
+        },
+        "eMax": {
+            "Petra/Glad": {
+                "ATK": 1833.55,
+                "HP": 19475.0,
+                "normalDMG": 41159.487871008,
+                "eDMG": 23272.2186102016,
+                "qDMG": 40806.23446029728,
+                "totalDMG": 105237.94094150688,
+                "totalSuppDMG": 64078.45307049888,
+                "identifier": "atk sands, geo cup, critRATE helm"
+            }
+        }
+    },
+    "Prototype Starglitter": {
+        "totalMax": {
+            "Glad": {
+                "ATK": 1563.606,
+                "HP": 19475.0,
+                "normalDMG": 55619.18963007977,
+                "eDMG": 12145.968462912002,
+                "qDMG": 21535.7295275496,
+                "totalDMG": 89300.88762054137,
+                "totalSuppDMG": 33681.6979904616,
+                "identifier": "atk sands, phys cup, critRATE helm"
+            }
+        },
+        "totalSuppMax": {
+            "Petra/Noblesse": {
+                "ATK": 1426.626,
+                "HP": 19475.0,
+                "normalDMG": 27105.561025282284,
+                "eDMG": 18457.78839285043,
+                "qDMG": 39534.863458351516,
+                "totalDMG": 85098.21287648423,
+                "totalSuppDMG": 57992.65185120195,
+                "identifier": "atk sands, geo cup, critRATE helm"
+            }
+        },
+        "eMax": {
+            "Petra/Glad": {
+                "ATK": 1563.606,
+                "HP": 19475.0,
+                "normalDMG": 28773.507309922286,
+                "eDMG": 19627.885036065793,
+                "qDMG": 34801.73891652015,
+                "totalDMG": 83203.13126250822,
+                "totalSuppDMG": 54429.62395258594,
+                "identifier": "atk sands, geo cup, critRATE helm"
+            }
+        }
+    },
+    "Vortex Vanquisher": {
+        "totalMax": {
+            "Glad": {
+                "ATK": 2068.514,
+                "HP": 19475.0,
+                "normalDMG": 67503.36369965292,
+                "eDMG": 14814.887915328,
+                "qDMG": 25769.1970994424,
+                "totalDMG": 108087.44871442333,
+                "totalSuppDMG": 40584.085014770404,
+                "identifier": "atk sands, phys cup, critRATE helm"
+            }
+        },
+        "totalSuppMax": {
+            "Petra/Noblesse": {
+                "ATK": 1913.894,
+                "HP": 19475.0,
+                "normalDMG": 33038.812961506286,
+                "eDMG": 22620.07961161421,
+                "qDMG": 47457.58658892462,
+                "totalDMG": 103116.47916204511,
+                "totalSuppDMG": 70077.66620053884,
+                "identifier": "atk sands, geo cup, critRATE helm"
+            }
+        },
+        "eMax": {
+            "Petra/Glad": {
+                "ATK": 2068.514,
+                "HP": 19475.0,
+                "normalDMG": 34921.55390566629,
+                "eDMG": 23940.858871170047,
+                "qDMG": 41643.022512698924,
+                "totalDMG": 100505.43528953526,
+                "totalSuppDMG": 65583.88138386897,
+                "identifier": "atk sands, geo cup, critRATE helm"
+            }
+        }
+    },
+    "White Tassel": {
+        "totalMax": {
+            "Glad": {
+                "ATK": 1384.192,
+                "HP": 19475.0,
+                "normalDMG": 60569.97190398884,
+                "eDMG": 13196.250012479999,
+                "qDMG": 23606.809508783997,
+                "totalDMG": 97373.03142525285,
+                "totalSuppDMG": 36803.059521264,
+                "identifier": "atk sands, phys cup, critRATE helm"
+            }
+        },
+        "totalSuppMax": {
+            "Petra/Noblesse": {
+                "ATK": 963.0,
+                "HP": 26322.87,
+                "normalDMG": 29324.294991360002,
+                "eDMG": 19683.871433452798,
+                "qDMG": 44478.09777303361,
+                "totalDMG": 93486.26419784641,
+                "totalSuppDMG": 64161.96920648641,
+                "identifier": "hp sands, geo cup, critRATE helm"
+            }
+        },
+        "eMax": {
+            "Petra/Glad": {
+                "ATK": 1384.192,
+                "HP": 19475.0,
+                "normalDMG": 31334.698346605714,
+                "eDMG": 21325.14002016768,
+                "qDMG": 38148.60416619494,
+                "totalDMG": 90808.44253296833,
+                "totalSuppDMG": 59473.74418636262,
                 "identifier": "atk sands, geo cup, critRATE helm"
             }
         }

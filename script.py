@@ -65,7 +65,7 @@ def doDamageCalc(weapon, artiset):
     totalCritRATE = artistats.helmCritRATE
 
     if hasattr(weapon, "critRATE"):
-        totalCritRate += weapon.critRATE
+        totalCritRATE += weapon.critRATE
 
     totalCritDMG = artistats.helmCritDMG
 
@@ -96,7 +96,7 @@ def doDamageCalc(weapon, artiset):
 
     mvAdditive = 0
     if hasattr(weapon, "mvAdditive"):
-        mvAdditive += (weapon.mvAdditive * Zhongli.Normal.hits)
+        mvAdditive += weapon.mvAdditive
 
     # Buff additional damage
     normalBuffAddlDMG = Zhongli.Normal.hpConv * totalHP * Zhongli.Normal.hits
@@ -115,13 +115,15 @@ def doDamageCalc(weapon, artiset):
         (Zhongli.Normal.rotations*normalATKSpeed)
 
     # Extra weapon hit calculation
-    # MV additive
+    # MV additive (this is damage per proc)
     normalAttackExtraDamage = (totalATK * mvAdditive) * \
-        physMulti * critMulti * (Zhongli.Normal.rotations * normalATKSpeed)
+        physMulti * critMulti
 
+    numHits = Zhongli.Normal.hits * Zhongli.Normal.rotations
     if hasattr(weapon, "cooldown"):
-        normalAttackExtraDamage /= ((Zhongli.Normal.rotations*normalATKSpeed) *
-                                    140 / weapon.cooldown)
+        numHits = 720 / weapon.cooldown
+
+    normalAttackExtraDamage *= numHits
 
     normalAttackDamage += normalAttackExtraDamage
 
@@ -234,15 +236,15 @@ if __name__ == "__main__":
                     totalSuppMax["value"] = data["totalSuppDMG"]
                     totalSuppMax["idx"] = idx
 
-        maximalData[weapon]["eMax"] = {
-            eMax["name"]: weaponData[eMax["name"]][eMax["idx"]]
-        }
         maximalData[weapon]["totalMax"] = {
             totalMax["name"]: weaponData[totalMax["name"]][totalMax["idx"]]
         }
         maximalData[weapon]["totalSuppMax"] = {
             totalSuppMax["name"]: weaponData[totalSuppMax["name"]
                                              ][totalSuppMax["idx"]]
+        }
+        maximalData[weapon]["eMax"] = {
+            eMax["name"]: weaponData[eMax["name"]][eMax["idx"]]
         }
 
         # Reset parse parameters for next weapon

@@ -3,7 +3,7 @@ class StaffofHoma_Below:
     level = 90
     refinementLevel = 1
 
-    name = "Staff of Homa"
+    name = "Staff of Homa (<50% HP)"
 
     # Base stat values
     baseATK = 608
