@@ -13,20 +13,24 @@ from data.artisets.PetraGlad import PetraGlad
 from data.artisets.PetraNoblesse import PetraNoblesse
 
 
+# Creating instance of artistats
+artistats = ArtifactStats()
+
+
 # Functional damage calculation
 def doDamageCalc(weapon, artiset):
     # HP stat calculations =====================================================
-    totalHPPercent = ArtifactStats.sandsHP + \
-        ArtifactStats.cupHP + ArtifactStats.helmHP
+    totalHPPercent = artistats.sandsHP + \
+        artistats.cupHP + artistats.helmHP
 
     if hasattr(weapon, "hpPercent"):
         totalHPPercent += weapon.hpPercent
 
-    totalHP = (Zhongli.baseHP * (1 + totalHPPercent)) + ArtifactStats.flowerHP
+    totalHP = (Zhongli.baseHP * (1 + totalHPPercent)) + artistats.flowerHP
 
     # ATK stat calculations ====================================================
-    totalATKPercent = ArtifactStats.sandsATK + \
-        ArtifactStats.cupATK + ArtifactStats.helmATK
+    totalATKPercent = artistats.sandsATK + \
+        artistats.cupATK + artistats.helmATK
 
     if hasattr(weapon, "atkPercent"):
         totalATKPercent += weapon.atkPercent
@@ -35,15 +39,15 @@ def doDamageCalc(weapon, artiset):
         totalATKPercent += artiset.atkPercent
 
     totalATK = (Zhongli.baseATK + weapon.baseATK) * \
-        (1+totalATKPercent) + ArtifactStats.featherATK
+        (1+totalATKPercent) + artistats.featherATK
 
     # CRIT stat calculations ===================================================
-    totalCritRATE = ArtifactStats.helmCritRATE
+    totalCritRATE = artistats.helmCritRATE
 
     if hasattr(weapon, "critRATE"):
         totalCritRate += weapon.critRATE
 
-    totalCritDMG = ArtifactStats.helmCritDMG
+    totalCritDMG = artistats.helmCritDMG
 
     if hasattr(weapon, "critDMG"):
         totalCritDMG += weapon.critDMG
@@ -51,7 +55,7 @@ def doDamageCalc(weapon, artiset):
     critMulti = totalCritRATE * (1+totalCritDMG) + 1
 
     # PHYS stat calculations ===================================================
-    totalPHYSDMG = ArtifactStats.cupPHYS
+    totalPHYSDMG = artistats.cupPHYS
 
     if hasattr(weapon, "physDMG"):
         totalPHYSDMG += weapon.physDMG
@@ -59,7 +63,7 @@ def doDamageCalc(weapon, artiset):
     physMulti = totalPHYSDMG + 1
 
     # GEO stat calculations ====================================================
-    totalGEODMG = ArtifactStats.cupGEO
+    totalGEODMG = artistats.cupGEO
 
     if hasattr(artiset, "geoDMG"):
         totalGEODMG += artiset.geoDMG
@@ -123,7 +127,7 @@ if __name__ == "__main__":
 
     weapons = [CrescentPike]
 
-    artistats = {
+    artistatsList = {
         "sands": ["hp", "atk"],
         "cup": ["hp", "atk", "phys", "geo"],
         "helm": ["hp", "atk", "critRATE", "critDMG"]
@@ -131,12 +135,12 @@ if __name__ == "__main__":
 
     for weapon in weapons:
         for artiset in artisets:
-            for sandsIndex, sands in enumerate(artistats["sands"]):
-                ArtifactStats.setSands(sandsIndex)
-                for cupIndex, cup in enumerate(artistats["cup"]):
-                    ArtifactStats.setCup(cupIndex)
-                    for helmIndex, helm in enumerate(artistats["helm"]):
-                        ArtifactStats.setHelm(helmIndex)
+            for sandsIndex, sands in enumerate(artistatsList["sands"]):
+                artistats.setSands(sandsIndex)
+                for cupIndex, cup in enumerate(artistatsList["cup"]):
+                    artistats.setCup(cupIndex)
+                    for helmIndex, helm in enumerate(artistatsList["helm"]):
+                        artistats.setHelm(helmIndex)
 
                         # Run calculations
                         damageData = doDamageCalc(weapon, artiset)
@@ -150,5 +154,4 @@ if __name__ == "__main__":
 
                     print(damageData)
 
-# ! Artifacts are never changed
 # ! Need to add dunder methods for name or str
