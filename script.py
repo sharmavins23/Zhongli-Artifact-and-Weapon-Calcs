@@ -14,8 +14,6 @@ from data.artisets.PetraGlad import PetraGlad
 from data.artisets.PetraNoblesse import PetraNoblesse
 
 
-# Creating instances of weapons
-crescentPike = CrescentPike()
 # Creating instances of artistats
 artistats = ArtifactStats()
 
@@ -128,7 +126,7 @@ if __name__ == "__main__":
     artisets = [BloodstainedGlad, BloodstainedNoblesse,
                 Bolide, Glad, GladNoblesse, PetraGlad, PetraNoblesse]
 
-    weapons = [crescentPike]
+    weapons = [CrescentPike]
 
     artistatsList = {
         "sands": ["hp", "atk"],
@@ -152,7 +150,7 @@ if __name__ == "__main__":
 
                         identifier = f"{sands} sands, {cup} cup, {helm} helm"
 
-                        totalDataJSON[weapon.__name__][artiset.__name__][identifier] = damageData
+                        totalDataJSON[weapon.name][artiset.name][identifier] = damageData
 
     with open("dataOut.json", "w") as outfile:
         json.dump(totalDataJSON, outfile)

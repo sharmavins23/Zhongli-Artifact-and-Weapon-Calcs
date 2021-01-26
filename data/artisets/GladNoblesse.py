@@ -3,3 +3,5 @@ class GladNoblesse:
     # Passive data
     atkPercent = 0.18
     burstDMG = 0.2
+
+    name = "Glad/Noblesse"

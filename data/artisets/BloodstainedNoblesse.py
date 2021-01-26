@@ -3,3 +3,5 @@ class BloodstainedNoblesse:
     # Passive data
     physDMG = 0.15
     burstDMG = 0.2
+
+    name = "Bloodstained/Noblesse"

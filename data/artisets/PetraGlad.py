@@ -3,3 +3,5 @@ class PetraGlad:
     # Passive data
     geoDMG = 0.15
     atkPercent = 0.18
+
+    name = "Petra/Glad"
