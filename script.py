@@ -22,6 +22,9 @@ def doDamageCalc(weapon, artiset):
     if hasattr(weapon, "atkPercent"):
         totalATKPercent += weapon.atkPercent
 
+    if hasattr(artiset, "atkPercent"):
+        totalATKPercent += artiset.atkPercent
+
     totalATK = (Zhongli.baseATK + weapon.baseATK) * \
         (1+totalATKPercent) + ArtifactStats.featherATK
 
@@ -49,6 +52,9 @@ def doDamageCalc(weapon, artiset):
     # GEO stat calculations ====================================================
     totalGEODMG = ArtifactStats.cupGEO
 
+    if hasattr(artiset, geoDMG):
+        totalGEODMG += artiset.geoDMG
+
     geoMulti = totalGEODMG + 1
 
 # * Movement Calculations ======================================================
@@ -61,8 +67,12 @@ def doDamageCalc(weapon, artiset):
     # Buff additional damage
     normalBuffAddlDMG = Zhongli.Normal.hpConv * totalHP * Zhongli.Normal.hits
 
+    normalDMG = 0
+    if hasattr(artiset, "normalDMG"):
+        normalDMG += artiset.normalDMG
+
     normalAttackDamage = ((totalATK * comboTotal) + normalBuffAddlDMG) * \
-        physMulti * critMulti * Zhongli.Normal.rotations
+        (physMulti + normalDMG) * critMulti * Zhongli.Normal.rotations
 
     # Dominus Lapidis calculations =============================================
     eBuffAddlDMG = Zhongli.HoldE.hpConv * totalHP
@@ -78,8 +88,13 @@ def doDamageCalc(weapon, artiset):
     # Planet Befall calculations ===============================================
     qConversionDMG = totalHP * Zhongli.Q.hpConv
 
+    burstDMG = 0
+    if hasattr(artiset, "burstDMG"):
+        burstDMG += artiset.burstDMG
+    burstDMGMulti += 1
+
     qDamage = ((totalATK * Zhongli.Q.mv) + qConversionDMG) * \
-        critMulti * geoMulti
+        critMulti * geoMulti * burstDMGMulti
 
 # * Outputs ====================================================================
     return {
