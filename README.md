@@ -4,6 +4,16 @@ This project is a small artifact and weapon calculator, which calculates all of
 Zhongli's possible weapons and artifacts and saves their stats in a data-driven
 format.
 
+## Usage
+
+In the command line, you can type `python script.py` in order to run the script.
+It runs through all data and calculates the maximal values for each weapon.
+
+To change the weapons that are being calculated, or show separate data, simply
+change the list contents in the top of the `Calling code` section. Then,
+uncomment the bottom portion that prints out to `dataOut.json` the total JSON
+data. This will print out ALL values, instead of just the maximal values.
+
 # To-Do List
 
 -   Re-do weapon classes with dynamic attack and stat calculations based on
