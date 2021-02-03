@@ -1,9 +1,9 @@
 # Static data class for crescent pike
 class CrescentPike:
     level = 90
-    refinementLevel = 5
+    refinementLevel = 1
 
-    name = "Crescent Pike (R5)"
+    name = "Crescent Pike (R1)"
 
     # Base stat values
     baseATK = 565
