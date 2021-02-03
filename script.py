@@ -266,8 +266,8 @@ if __name__ == "__main__":
             "idx": 0
         }
 
-    # with open("dataOut.json", "w") as outfile:
-    #     json.dump(maximalData, outfile)
-
     with open("dataOut.json", "w") as outfile:
-        json.dump(totalDataJSON, outfile)
+        json.dump(maximalData, outfile)
+
+    # with open("dataOut.json", "w") as outfile:
+    #     json.dump(totalDataJSON, outfile)

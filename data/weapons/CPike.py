@@ -3,7 +3,7 @@ class CrescentPike:
     level = 90
     refinementLevel = 5
 
-    name = "Crescent Pike"
+    name = "Crescent Pike (R5)"
 
     # Base stat values
     baseATK = 565
