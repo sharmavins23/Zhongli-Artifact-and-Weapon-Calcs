@@ -62,12 +62,12 @@ def doDamageCalc(weapon, artiset):
         (1+totalATKPercent) + artistats.featherATK + atkConv
 
     # CRIT stat calculations ===================================================
-    totalCritRATE = artistats.helmCritRATE
+    totalCritRATE = artistats.helmCritRATE + Zhongli.baseCritRATE
 
     if hasattr(weapon, "critRATE"):
         totalCritRATE += weapon.critRATE
 
-    totalCritDMG = artistats.helmCritDMG
+    totalCritDMG = artistats.helmCritDMG + Zhongli.baseCritDMG
 
     if hasattr(weapon, "critDMG"):
         totalCritDMG += weapon.critDMG
@@ -166,10 +166,10 @@ if __name__ == "__main__":
     artisets = [BloodstainedGlad, BloodstainedNoblesse,
                 Bolide, Glad, GladNoblesse, PetraGlad, PetraNoblesse]
 
-    # weapons = [BlackcliffPole_Base, BlackcliffPole_Stacked, BlackTassel, CrescentPike, Deathmatch_Multi, Deathmatch_Single, DragonspineSpear, StaffofHoma_Above,
-    #            StaffofHoma_Below, LithicSpear_Base, LithicSpear_Stacked, PrimordialJadeWingedSpear, SkywardSpine, Starglitter, VortexVanquisher, WhiteTassel]
+    weapons = [BlackcliffPole_Base, BlackcliffPole_Stacked, BlackTassel, CrescentPike, Deathmatch_Multi, Deathmatch_Single, DragonspineSpear, StaffofHoma_Above,
+               StaffofHoma_Below, LithicSpear_Base, LithicSpear_Stacked, PrimordialJadeWingedSpear, SkywardSpine, Starglitter, VortexVanquisher, WhiteTassel]
 
-    weapons = [CrescentPike]
+    # weapons = [CrescentPike]
 
     artistatsList = {
         "sands": ["hp", "atk"],

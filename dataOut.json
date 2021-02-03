@@ -4,11 +4,11 @@
             "Glad": {
                 "ATK": 1654.136,
                 "HP": 19475.0,
-                "normalDMG": 126059.21537875218,
-                "eDMG": 12624.505697472,
-                "qDMG": 22294.7902262976,
-                "totalDMG": 160978.51130252177,
-                "totalSuppDMG": 34919.2959237696,
+                "normalDMG": 148222.94470354426,
+                "eDMG": 14844.146096608001,
+                "qDMG": 26214.6599037664,
+                "totalDMG": 189281.75070391863,
+                "totalSuppDMG": 41058.8060003744,
                 "identifier": "atk sands, phys cup, critRATE helm"
             }
         },
@@ -16,11 +16,11 @@
             "Petra/Noblesse": {
                 "ATK": 1507.256,
                 "HP": 19475.0,
-                "normalDMG": 73462.85445167555,
-                "eDMG": 19146.537789422597,
-                "qDMG": 40845.865137136316,
-                "totalDMG": 133455.25737823447,
-                "totalSuppDMG": 59992.40292655891,
+                "normalDMG": 86379.09240065436,
+                "eDMG": 22512.881771468295,
+                "qDMG": 48027.38452242229,
+                "totalDMG": 156919.35869454494,
+                "totalSuppDMG": 70540.26629389059,
                 "identifier": "atk sands, geo cup, critRATE helm"
             }
         },
@@ -28,11 +28,11 @@
             "Petra/Glad": {
                 "ATK": 1654.136,
                 "HP": 19475.0,
-                "normalDMG": 79345.86781334614,
-                "eDMG": 20401.201207114755,
-                "qDMG": 36028.38100569692,
-                "totalDMG": 135775.4500261578,
-                "totalSuppDMG": 56429.58221281168,
+                "normalDMG": 93296.45708182539,
+                "eDMG": 23988.140092118534,
+                "qDMG": 42362.890404486505,
+                "totalDMG": 159647.48757843042,
+                "totalSuppDMG": 66351.03049660503,
                 "identifier": "atk sands, geo cup, critRATE helm"
             }
         }
