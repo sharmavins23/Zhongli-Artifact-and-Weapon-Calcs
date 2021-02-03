@@ -10,4 +10,4 @@ class CrescentPike:
     physDMG = 0.345
 
     # Passive values
-    mvAdditive = 0.4
+    mvAdditive = 0.2 + ((refinementLevel-1)*0.05)

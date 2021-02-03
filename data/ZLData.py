@@ -12,7 +12,8 @@ class Zhongli:
 
     class Normal:  # Normal attack spear kick hop combo
         frames = 140
-        mv = 2.7090
+        #mv = 2.7090
+        mv = 0.5653+0.5723+0.7087+0.7889+(4*0.1975)
         hits = 8
         rotations = (720 - 100 - 140) / 140  # Removing time for hold E and Q
         hpConv = 0.0139

@@ -166,8 +166,10 @@ if __name__ == "__main__":
     artisets = [BloodstainedGlad, BloodstainedNoblesse,
                 Bolide, Glad, GladNoblesse, PetraGlad, PetraNoblesse]
 
-    weapons = [BlackcliffPole_Base, BlackcliffPole_Stacked, BlackTassel, CrescentPike, Deathmatch_Multi, Deathmatch_Single, DragonspineSpear, StaffofHoma_Above,
-               StaffofHoma_Below, LithicSpear_Base, LithicSpear_Stacked, PrimordialJadeWingedSpear, SkywardSpine, Starglitter, VortexVanquisher, WhiteTassel]
+    # weapons = [BlackcliffPole_Base, BlackcliffPole_Stacked, BlackTassel, CrescentPike, Deathmatch_Multi, Deathmatch_Single, DragonspineSpear, StaffofHoma_Above,
+    #            StaffofHoma_Below, LithicSpear_Base, LithicSpear_Stacked, PrimordialJadeWingedSpear, SkywardSpine, Starglitter, VortexVanquisher, WhiteTassel]
+
+    weapons = [CrescentPike]
 
     artistatsList = {
         "sands": ["hp", "atk"],
@@ -264,5 +266,8 @@ if __name__ == "__main__":
             "idx": 0
         }
 
+    # with open("dataOut.json", "w") as outfile:
+    #     json.dump(maximalData, outfile)
+
     with open("dataOut.json", "w") as outfile:
-        json.dump(maximalData, outfile)
+        json.dump(totalDataJSON, outfile)
