@@ -1,7 +1,7 @@
 # Static data class for character stats
 class Zhongli:
     level = 90
-    talentLevel = 6
+    talentLevel = 8
     # Base stat values
     baseHP = 14695
     baseATK = 251
